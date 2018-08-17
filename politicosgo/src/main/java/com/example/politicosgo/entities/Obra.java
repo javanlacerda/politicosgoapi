@@ -1,4 +1,4 @@
-package com.example.politicosgo.entitys;
+package com.example.politicosgo.entities;
 
 import org.springframework.data.annotation.Id;
 
