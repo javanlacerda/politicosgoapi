@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ObraRepository extends MongoRepository<Obra, String> {
 
-	void deleteById(int id);
+
+	void deleteById(Long id);
 
 }

@@ -10,8 +10,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,29 +24,32 @@ public class ObraController {
 
     @Autowired
     private ObraService oService;
-
+    
     @GetMapping
     public Collection<Obra> getObras() {
+
 
         return oService.getObras();
 
     }
 
     @PostMapping
-    public ResponseEntity<String> postObra(Obra obra) {
+    public ResponseEntity<String> postObra(@RequestBody Obra obra) {
 
+        System.out.println(obra);
         return this.oService.putObra(obra);
+
     }
 
     @PutMapping
-    public ResponseEntity<String> putObra(Obra obra) {
+    public ResponseEntity<String> putObra(@RequestBody Obra obra) {
 
         return this.oService.updateObra(obra);
 
     }
 
-    @DeleteMapping
-    public ResponseEntity<String> deleteObraById(int id) {
+    @DeleteMapping(path= "/{id}")
+    public ResponseEntity<String> deleteObraById(@PathVariable(name = "id") Long id) {
 
         return this.oService.deleteObra(id);
 

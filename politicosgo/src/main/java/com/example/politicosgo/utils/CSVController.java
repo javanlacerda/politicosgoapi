@@ -4,10 +4,16 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+
+import com.example.politicosgo.services.ObraService;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
 import java.io.InputStreamReader;
 import java.io.FileInputStream;
 
 public class CSVController {
+
 
         public ArrayList<String[]> run(String csvFile) {
 
@@ -15,7 +21,7 @@ public class CSVController {
 
 		BufferedReader myBuffer = null;		        
         
-		String csvDivisor = ":";
+		String csvDivisor = ",";
                 try {
 
 			myBuffer = new BufferedReader(new InputStreamReader(new FileInputStream(csvFile), "UTF-8"));
@@ -29,6 +35,7 @@ public class CSVController {
                                 out.add(lineSplited);
 
                                 line = myBuffer.readLine();
+
 
                         }
 
