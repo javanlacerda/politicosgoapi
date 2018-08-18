@@ -18,6 +18,16 @@ public class Prefeito {
 
     private String cidade;
 
+    private Long avaliacao;
+
+    public Long getAvaliacao(){
+        return this.avaliacao;
+    }
+
+    public void setAvaliacao(Long avaliacao){
+        this.avaliacao = avaliacao;
+    }
+    
     public Long getCpf() {
         return this.cpf;
     }

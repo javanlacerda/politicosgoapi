@@ -33,6 +33,15 @@ public class PrefeitoController {
 
     }
 
+    @GetMapping(path="/{cpf}")
+    public Long getAvaliacaoPrefeito(@PathVariable(name = "cpf") Long cpf){
+        Long result = -1L;
+        for(Prefeito prefeito : pService.getPrefeitos())
+            if(prefeito.getCpf() == cpf)
+                result = prefeito.getAvaliacao();
+        return result;
+    }
+
     @PostMapping
     public ResponseEntity<String> postPrefeito(@RequestBody Prefeito prefeito) {
 
