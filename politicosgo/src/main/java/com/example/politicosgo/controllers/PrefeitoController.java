@@ -34,11 +34,12 @@ public class PrefeitoController {
     }
 
     @GetMapping(path="/{cpf}")
-    public Long getAvaliacaoPrefeito(@PathVariable(name = "cpf") Long cpf){
-        Long result = -1L;
-        for(Prefeito prefeito : pService.getPrefeitos())
-            if(prefeito.getCpf() == cpf)
-                result = prefeito.getAvaliacao();
+    public Prefeito getAvaliacaoPrefeito(@PathVariable(name = "cpf") Long cpf){
+        Prefeito result = null;
+        for(Prefeito prefeito : this.getPrefeitos()){
+            if(prefeito.getCpf().equals(cpf))
+                return prefeito;
+        }
         return result;
     }
 

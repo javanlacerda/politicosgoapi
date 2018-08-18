@@ -24,6 +24,9 @@ public class ObraController {
 
     @Autowired
     private ObraService oService;
+
+    @Autowired
+    private PrefeitoService pService;
     
     @GetMapping
     public Collection<Obra> getObras() {
