@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(path = "/obras")
 public class ObraController {
 	
-	private final int MAX_ALLOWED_DISTANCE = 3000;
+	private final int MAX_ALLOWED_DISTANCE = 3;
 
     @Autowired
     private ObraService oService;

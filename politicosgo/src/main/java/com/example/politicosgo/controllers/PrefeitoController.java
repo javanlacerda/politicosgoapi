@@ -1,6 +1,7 @@
 package com.example.politicosgo.controllers;
 
 import java.util.Collection;
+import java.util.Map;
 import java.util.Random;
 
 import com.example.politicosgo.entities.Obra;
@@ -37,11 +38,11 @@ public class PrefeitoController {
     }
     
     @PostMapping(path="/responsible")
-    public Prefeito getRandomResponsible(@RequestBody Obra obra) {
+    public Prefeito getRandomResponsible(@RequestBody Map<String, String> json) {
     	Prefeito result = null;
     	
     	for(Prefeito prefeito : this.getPrefeitos()) {
-    		if(prefeito.getCidade().equalsIgnoreCase(obra.getMunicipio())) {
+    		if(prefeito.getCidade().equalsIgnoreCase(json.get("municipio"))) {
     			result = prefeito;
     		}
     	}
