@@ -1,9 +1,12 @@
 package com.example.politicosgo.controllers;
 
 import java.util.Collection;
+import java.util.Random;
 
+import com.example.politicosgo.entities.Obra;
 import com.example.politicosgo.entities.Prefeito;
 import com.example.politicosgo.services.PrefeitoService;
+import com.example.politicosgo.utils.DistanceCalculator;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -31,6 +34,25 @@ public class PrefeitoController {
 
         return pService.getPrefeitos();
 
+    }
+    
+    @PostMapping(path="/responsible")
+    public Prefeito getRandomResponsible(@RequestBody Obra obra) {
+    	Prefeito result = null;
+    	
+    	for(Prefeito prefeito : this.getPrefeitos()) {
+    		if(prefeito.getCidade().equalsIgnoreCase(obra.getMunicipio())) {
+    			result = prefeito;
+    		}
+    	}
+    	
+    	Random ge = new Random();
+    	
+    	if(ge.nextInt(10) == 9) {
+    		 result = null;
+    	}
+   
+    	return result;
     }
 
     @GetMapping(path="/{cpf}")
