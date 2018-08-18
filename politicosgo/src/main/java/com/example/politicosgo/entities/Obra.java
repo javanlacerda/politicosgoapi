@@ -7,6 +7,10 @@ public class Obra {
 	@Id
 	private Long id;
 
+	private Double latitude;
+
+	private Double longitude;
+
 	private String name;
 
 	private String situacao;
@@ -119,82 +123,10 @@ public class Obra {
 
 	private Double saldoTotal;
 
-	@Override
-	public String toString() {
-		return "{" +
-			" id='" + getId() + "'" +
-			", name='" + getName() + "'" +
-			", situacao='" + getSituacao() + "'" +
-			", municipio='" + getMunicipio() + "'" +
-			", uf='" + getUf() + "'" +
-			", cep='" + getCep() + "'" +
-			", logradouro='" + getLogradouro() + "'" +
-			", bairro='" + getBairro() + "'" +
-			", termo='" + getTermo() + "'" +
-			", fimConvenio='" + getFimConvenio() + "'" +
-			", situacaoConvenio='" + getSituacaoConvenio() + "'" +
-			", percentualExecucao='" + getPercentualExecucao() + "'" +
-			", previsaoConcolusao='" + getPrevisaoConcolusao() + "'" +
-			", tipoEnsino='" + getTipoEnsino() + "'" +
-			", tipoProj='" + getTipoProj() + "'" +
-			", tipoObra='" + getTipoObra() + "'" +
-			", classificacaoObra='" + getClassificacaoObra() + "'" +
-			", valorFNDE='" + getValorFNDE() + "'" +
-			", redeDeEnsino='" + getRedeDeEnsino() + "'" +
-			", cnpj='" + getCnpj() + "'" +
-			", inscricaoEstadual='" + getInscricaoEstadual() + "'" +
-			", nomeEntidade='" + getNomeEntidade() + "'" +
-			", razaoSocial='" + getRazaoSocial() + "'" +
-			", email='" + getEmail() + "'" +
-			", sigla='" + getSigla() + "'" +
-			", telefone='" + getTelefone() + "'" +
-			", fax='" + getFax() + "'" +
-			", CEPEntidade='" + getCEPEntidade() + "'" +
-			", logradouroEntidade='" + getLogradouroEntidade() + "'" +
-			", complementoEntidade='" + getComplementoEntidade() + "'" +
-			", numeroEntidade='" + getNumeroEntidade() + "'" +
-			", bairroEntidade='" + getBairroEntidade() + "'" +
-			", ufEntidade='" + getUfEntidade() + "'" +
-			", municipioEntidade='" + getMunicipioEntidade() + "'" +
-			", modalidadeLicitacao='" + getModalidadeLicitacao() + "'" +
-			", numeroLicitacao='" + getNumeroLicitacao() + "'" +
-			", homologacaoLicitacao='" + getHomologacaoLicitacao() + "'" +
-			", empresaContratada='" + getEmpresaContratada() + "'" +
-			", dataDeAssinaturaContrato='" + getDataDeAssinaturaContrato() + "'" +
-			", prazoVigencia='" + getPrazoVigencia() + "'" +
-			", dataTerminoContrato='" + getDataTerminoContrato() + "'" +
-			", valorContrato='" + getValorContrato() + "'" +
-			", valorPactuadoFNDE='" + getValorPactuadoFNDE() + "'" +
-			", dataUltimVistoria='" + getDataUltimVistoria() + "'" +
-			", situacaoVistoria='" + getSituacaoVistoria() + "'" +
-			", obs='" + getObs() + "'" +
-			", totalPago='" + getTotalPago() + "'" +
-			", percentualPago='" + getPercentualPago() + "'" +
-			", banco='" + getBanco() + "'" +
-			", agencia='" + getAgencia() + "'" +
-			", conta='" + getConta() + "'" +
-			", data='" + getData() + "'" +
-			", saldoConta='" + getSaldoConta() + "'" +
-			", saldoFundos='" + getSaldoFundos() + "'" +
-			", saldoPoupanca='" + getSaldoPoupanca() + "'" +
-			", saldoCdb='" + getSaldoCdb() + "'" +
-			", saldoTotal='" + getSaldoTotal() + "'" +
-			"}";
-	}
-
-	public Obra(Long id, String name, String situacao, String municipio, String uf, String cep, String logradouro,
-			String bairro, String termo, String fimConvenio, String situacaoConvenio, Double percentualExecucao,
-			String previsaoConcolusao, String tipoEnsino, String tipoProj, String tipoObra, String classificacaoObra,
-			Double valorFNDE, String redeDeEnsino, Long cnpj, String inscricaoEstadual, String nomeEntidade,
-			String razaoSocial, String email, String sigla, String telefone, String fax, String CEPEntidade,
-			String logradouroEntidade, String complementoEntidade, String numeroEntidade, String bairroEntidade,
-			String ufEntidade, String municipioEntidade, String modalidadeLicitacao, String numeroLicitacao,
-			String homologacaoLicitacao, String empresaContratada, String dataDeAssinaturaContrato,
-			String prazoVigencia, String dataTerminoContrato, Double valorContrato, Double valorPactuadoFNDE,
-			String dataUltimVistoria, String situacaoVistoria, String obs, String totalPago, String percentualPago,
-			Long banco, Long agencia, String conta, String data, Double saldoConta, Double saldoFundos,
-			Double saldoPoupanca, Double saldoCdb, Double saldoTotal) {
+	public Obra(Long id, Double latitude, Double longitude, String name, String situacao, String municipio, String uf, String cep, String logradouro, String bairro, String termo, String fimConvenio, String situacaoConvenio, Double percentualExecucao, String previsaoConcolusao, String tipoEnsino, String tipoProj, String tipoObra, String classificacaoObra, Double valorFNDE, String redeDeEnsino, Long cnpj, String inscricaoEstadual, String nomeEntidade, String razaoSocial, String email, String sigla, String telefone, String fax, String CEPEntidade, String logradouroEntidade, String complementoEntidade, String numeroEntidade, String bairroEntidade, String ufEntidade, String municipioEntidade, String modalidadeLicitacao, String numeroLicitacao, String homologacaoLicitacao, String empresaContratada, String dataDeAssinaturaContrato, String prazoVigencia, String dataTerminoContrato, Double valorContrato, Double valorPactuadoFNDE, String dataUltimVistoria, String situacaoVistoria, String obs, String totalPago, String percentualPago, Long banco, Long agencia, String conta, String data, Double saldoConta, Double saldoFundos, Double saldoPoupanca, Double saldoCdb, Double saldoTotal) {
 		this.id = id;
+		this.latitude = latitude;
+		this.longitude = longitude;
 		this.name = name;
 		this.situacao = situacao;
 		this.municipio = municipio;
@@ -253,14 +185,28 @@ public class Obra {
 		this.saldoTotal = saldoTotal;
 	}
 
-
-
 	public Long getId() {
 		return this.id;
 	}
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public Double getLatitude() {
+		return this.latitude;
+	}
+
+	public void setLatitude(Double latitude) {
+		this.latitude = latitude;
+	}
+
+	public Double getLongitude() {
+		return this.longitude;
+	}
+
+	public void setLongitude(Double longitude) {
+		this.longitude = longitude;
 	}
 
 	public String getName() {
@@ -711,4 +657,5 @@ public class Obra {
 		this.saldoTotal = saldoTotal;
 	}
 
+	
 }

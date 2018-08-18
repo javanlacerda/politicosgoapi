@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @CrossOrigin(origins = "*")
-@RequestMapping(path = "/obra")
+@RequestMapping(path = "/obras")
 public class ObraController {
 
     @Autowired

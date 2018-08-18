@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @CrossOrigin(origins = "*")
-@RequestMapping(path = "/prefeito")
+@RequestMapping(path = "/prefeitos")
 public class PrefeitoController {
 
     @Autowired
