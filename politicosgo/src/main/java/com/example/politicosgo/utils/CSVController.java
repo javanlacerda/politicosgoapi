@@ -5,9 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import com.example.politicosgo.services.ObraService;
 
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.InputStreamReader;
 import java.io.FileInputStream;

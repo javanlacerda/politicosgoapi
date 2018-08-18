@@ -36,7 +36,6 @@ public class ObraController {
     @PostMapping
     public ResponseEntity<String> postObra(@RequestBody Obra obra) {
 
-        System.out.println(obra);
         return this.oService.putObra(obra);
 
     }

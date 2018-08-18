@@ -1,6 +1,5 @@
 package com.example.politicosgo.services;
 
-import java.util.ArrayList;
 import java.util.Collection;
 
 import com.example.politicosgo.bdinterfaces.ObraRepository;
@@ -81,10 +80,10 @@ public class ObraService {
 
     // public void importObras() {
 
-    //     deleteAll();
+        // deleteAll();
 
-    //     ArrayList<String[]> obras = csv.run("obras.csv");
-    //     for (String[] obra : obras) {
+        // ArrayList<String[]> obras = csv.run("obras.csv");
+        // for (String[] obra : obras) {
 
     //         if (obra.length != 57) continue;
             
